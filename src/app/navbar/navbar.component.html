@@ -6,14 +6,26 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fa fa-glass"></i>   Liste <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#" (click)="setAccNavPosition(NAVPOSITION.LISTE)"><i class="fa fa-glass"></i>   Liste <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-euro"></i>   Preise</a>
+        <a class="nav-link" href="#" (click)="setAccNavPosition(NAVPOSITION.STATISKTIK)" ><i class="fa fa-line-chart"></i>   Trink Statistik</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fa fa-line-chart"></i>   Statistik</a>
+        <a class="nav-link" href="#" (click)="setAccNavPosition(NAVPOSITION.PREISE)"><i class="fa fa-euro"></i>   Preise</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#" (click)="setAccNavPosition(NAVPOSITION.FINANZEN)"><i class="fa fa-bar-chart"></i>   Finanzen</a>
       </li>
     </ul>
   </div>
 </nav>
+
+<div [ngSwitch]="accNavPosition">
+  <app-all-user *ngSwitchCase="NAVPOSITION.LISTE"></app-all-user>
+  <app-statistics *ngSwitchCase="NAVPOSITION.STATISKTIK"></app-statistics>
+  <app-price-list *ngSwitchCase="NAVPOSITION.PREISE"></app-price-list>
+  <app-finance-management *ngSwitchCase="NAVPOSITION.FINANZEN"></app-finance-management>
+</div>
+
+
