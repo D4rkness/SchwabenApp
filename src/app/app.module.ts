@@ -5,6 +5,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
+import {AngularFontAwesomeModule} from 'angular-font-awesome';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import {NavbarComponent} from './navbar/navbar.component';
   ],
   imports: [
     NgbModule.forRoot(),
+    AngularFontAwesomeModule,
     BrowserModule
   ],
   providers: [],
