@@ -1,3 +1,74 @@
-<p>
-  all-user works!
-</p>
+<div style="margin: 20px" xmlns="http://www.w3.org/1999/html">
+  <div class="row" style="margin-left: 1px">
+    <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+      <div class="btn-group" role="group">
+        <div class="btn-group" role="group">
+          <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-sort-amount-desc"></i> Sortieren nach
+          </button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Betrag</a>
+            <a class="dropdown-item" href="#">Name</a>
+            <a class="dropdown-item" href="#">Zuletzt gezahlt</a>
+            <a class="dropdown-item" href="#">Größter Alkoholiker</a>
+          </div>
+        </div>
+        <input class="input-group-text" placeholder="Suche nach..." style="margin-left: 5px; margin-right: 50px">
+      </div>
+      <button class="btn btn-secondary" style="margin-right: 5px "> <i class="fa fa-user-plus"></i>  Trinker Hinzufügen</button>
+      <button class="btn btn-secondary"> <i class="fa fa-minus-circle"></i>  Trinker Entfernen</button>
+    </div>
+
+  </div>
+  <div class = "row" style="margin-top:10px;">
+    <div class="col-md-2" *ngFor="let i of [1,1,1,1,1,1,1,1,1,1]">
+      <div class="panel panel-default">
+        <table class="table table-bordered table-dark table-curved">
+          <thead>
+          <tr>
+            <th scope="col" style="text-align: center"> Alex</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a>Schulden:</a> <a class="float-right">20€</a></td>
+            </tr>
+            <tr>
+              <td><a>Zuletzt Bezahlt:</a>  <a class="float-right">20.06.2016</a></td>
+            </tr>
+            <tr>
+              <td><a>Status:</a> <a class="float-right">Mitglied</a></td>
+            </tr>
+            <tr>
+              <td><a>Alkoholiker Index:</a> <a class="float-right">69%</a></td>
+            </tr>
+
+            <tr>
+              <td class="align-content-center">
+                <a>Alkohol hinzufügen </a>
+                <button class="btn btn-danger float-right align-content-center" ><i class="fa fa-minus-circle"></i></button>
+                <button class="btn btn-success float-right align-content-center" style="margin-right: 5px;"><i class="fa fa-plus-circle"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td class="align-middle">
+                <a>Alkohlfrei hinzufügen</a>
+                <button class="btn btn-danger float-right" ><i class="fa fa-minus-circle"></i></button>
+                <button class="btn btn-success float-right" style="margin-right: 5px;"><i class="fa fa-plus-circle"></i></button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input class="input-group-text col-sx-3 float-right" placeholder="Betrag" style="width: 100px" min="0" step="0.5">
+                <button class="btn btn-success "> <i class="fa fa-dollar"></i> Deckel Zahlen </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+</div>
+
+
